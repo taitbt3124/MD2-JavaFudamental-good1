@@ -1,27 +1,29 @@
+package module_14.Test;
+
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-public class PrimeCheck {
+public class Main {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.stdin);
+        Scanner scanner = new Scanner(System.in);
 
         try {
-            System.out.print("Nhập vào một số nguyên: ");
+            System.out.print("Nh?p v�o m?t s? nguy�n: ");
             int number = scanner.nextInt();
 
             if (number <= 0) {
-                System.out.println("Lỗi: Số nhập vào không hợp lệ để kiểm tra số nguyên tố (phải lớn hơn 0).");
+                System.out.println("L?i: S? nh?p v�o kh�ng h?p l? ?? ki?m tra s? nguy�n t? (ph?i l?n h?n 0).");
                 return;
             }
 
             if (isPrime(number)) {
-                System.out.println(number + " là số nguyên tố.");
+                System.out.println(number + " l� s? nguy�n t?.");
             } else {
-                System.out.println(number + " không phải là số nguyên tố.");
+                System.out.println(number + " kh�ng ph?i l� s? nguy�n t?.");
             }
 
         } catch (InputMismatchException e) {
-            System.out.println("Lỗi: Dữ liệu nhập vào không phải là số nguyên hợp lệ.");
+            System.out.println("L?i: D? li?u nh?p v�o kh�ng ph?i l� s? nguy�n h?p l?.");
         } finally {
             scanner.close();
         }
